@@ -1,0 +1,1072 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Τάσεις στο έδαφος</title>
+<link type="text/css" rel="stylesheet" href="">
+<style>
+            #header{
+                margin-top: 50px;
+                background-color: grey;
+                border-radius: 15px;
+                margin-left:25%;
+                margin-right:25%;
+                border:3px white solid;
+                box-shadow:-2px -2px 15px 3px grey;
+            }
+            #title{
+                user-select:none;
+                font-size: 60px;
+                margin-top: 5px;
+                margin-left:0%;
+                margin-right:0%;
+                text-shadow:-4px -2px 2px rgba(0, 0, 0, 1);
+            }
+            #counter{
+                margin-left:25% ;
+                margin-right:25%;
+                height: 40px;
+                vertical-align: center;
+                border: 1px dashed black;
+                margin-bottom: 30px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            #counter a{
+                user-select:none;
+                padding:5px;
+                margin-top:13.5px;
+                margin-bottom: 13.5px;
+                font-size:35px;
+                border-radius: 15px;
+                border:2px solid white;
+                background-color: grey;
+                color:white;
+                box-shadow:-2px -2px 15px 3px grey;
+                text-shadow:-2px -2px 2px rgba(0, 0, 0, 1);
+            }
+            /*=====================================================*/
+            /*=====================================================*/
+            /*=====================LAST SCREEN=====================*/
+            /*=====================================================*/
+            /*=====================================================*/
+            #lastCounter{
+                user-select:none;
+                font-size: 60px;
+                border-radius: 15px;
+                border:2px white solid;
+                background-color: grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                color:white;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-shadow:-4px -4px 2px rgba(0, 0, 0, 1);
+
+
+
+                margin-top: 100px;
+                height:70px;
+                margin-left:30% ;
+                margin-right:30%;
+            }
+            #lastCounter p{
+                margin-top: 0px;
+                margin-bottom: 0px;
+
+            }
+            #lastMyDiv1{
+                margin-left:0px;
+                margin-right:0px;
+                margin-top:120px;
+                margin-bottom: 120px;
+                border-radius:0px;
+                text-align: center;
+            }
+            #lastMyDiv1 p{
+                margin-right:0px;
+                margin-left: 0px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                user-select:none;
+                color:white;
+                font-size: 100px;
+            }
+            #lastMyDiv1 a{
+                border:2px solid grey;
+                padding: 30px;
+                border-radius:250px;
+                background-color: black;
+                color:grey;
+                cursor:pointer;
+                box-shadow: -4px -4px 15px 2px grey;
+                transition: all 0.3s linear;
+            }
+            #lastMyDiv1 a:hover{
+                box-shadow: -2px -2px 25px 4px white;
+                color:rgba(255,255,255,0.85);
+            }
+            #lastMyDiv2{
+                margin-top:00px;
+            }
+            #lastMyDiv2 p {
+                user-select:none;
+                background-color: black;
+                color:black;
+                padding: 10px;
+                font-size: 35px;
+                margin-top:0px;
+                margin-left:35% ;
+                margin-right:35%;
+            }
+            #lastMyDiv3 a{
+                user-select:none;
+                font-size: 20px;
+                border-radius: 15px;
+                background-color: black;
+                color:grey;
+                padding:5px;
+                margin-top: 50px;
+
+
+
+                height:30px;
+            }
+            #lastMyDiv3{
+               margin-left:35% ;
+                margin-right:35%;
+            }
+
+            #lastMyDiv3 p:hover{
+                
+            }
+
+            /*=====================================================*/
+            /*=====================================================*/
+            /*==================END OF LAST SCREEN=================*/
+            /*=====================================================*/
+            /*=====================================================*/
+            #myDiv4 button{
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 25px;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            #mydiv3 p{
+                border: black;
+            }
+            #myDiv3 button{
+                user-select:none;
+                padding: 10px;
+                font-size: 20px;
+                width:100%;
+                border-radius: 15px;
+                border:2px white solid;
+                background-color: grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                color:white;
+                margin-top: 50px;
+               
+                transition: all 0.3s linear;
+            }
+            #myDiv3 button:hover{
+                border:2px white solid;
+                background-color:grey;
+                color:white;
+                cursor: pointer;
+                box-shadow: -4px -4px 15px 2px grey;
+                text-shadow:-3px -1.5px 2px rgba(0, 0, 0, 1);
+                transform:scaleX(1.02);
+            }
+            #mydiv3 button:active{
+                transorm:scaleY(1.04);
+            }
+            #myDiv1{
+                user-select:none;
+                margin-top:0px;
+                background-color: white;
+                color:black;
+                border:2px solid grey;
+                font-size: 15px;
+                margin-bottom:20px;
+                box-shadow: -4px -4px 15px 2px white;
+            }
+            #myDiv1 p{
+                margin-bottom: 4px;
+                margin-top: 4px;
+            }
+            #myDiv1 p a{
+                font-size: 17px;
+                font-weight: bold;
+            }
+            @keyframes show{
+                from{background-color: black}
+                to{background-color: white}
+            }
+            #myDiv2 p{
+                font-size: 20px;
+                user-select:none;
+                background-color: black;
+                color:black;
+                padding: 10px;
+                border:2px solid grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                cursor: pointer;
+                transition: all 0.2s linear;
+            }
+            #myDiv2 p:hover{
+                background-color: white;
+                transform:scaleX(1.02);
+            }
+            #myDiv2 p:active{
+                background-color: rgba(255,255,255,0.85);
+                transform:scaleY(1.04);
+            }
+            #myDiv2{
+                margin-top:380px;
+            }
+            div{
+                margin-left:25% ;
+                margin-right:25%;
+                /*border:1px dashed white;*/
+                margin-bottom: 5px;
+                border-radius: 25px;
+            }
+            body{
+                margin: 0;
+                background-color: black;
+                text-align: center;
+                color:white;
+                font-size:20px;
+            }
+            p { 
+                border-radius: 15px;
+            }
+            input{
+                float:left;
+            }
+            span{
+                font-size: 9px;
+
+            }
+</style>
+
+<style>
+
+}
+
+#calculator{
+    margin-bottom: 340px;
+    text-align:center;
+    height: 800px;
+}
+#koumpia{
+    margin:0px;
+    display: inline-block;
+    vertical-align: center;
+}
+#othoni{
+    margin:0px;
+    display: inline-block;
+    vertical-align: center;
+    width: 95%;
+    }
+}
+#sxolia{
+    display:block;
+    text-align: center;
+    float:bottom;
+    
+}
+#sxolia p{
+    margin:3px;
+    font-size:15px;
+    color:grey;
+}
+#proxeiro{
+    margin:0px;
+    display: inline-block;
+    height: 344px;
+    width: 49.9%;
+    float:right;
+}
+#proxeiro1{
+    margin-left:2% ;
+    margin-right:3%;
+}
+#form_wrapper {
+display:inline-block;
+float:left;
+margin:0px;
+margin-left:0px;
+width:49%;
+height:340px;
+background-color:#000;
+text-align:center;
+border:2px grey solid;
+border-radius:10px;
+box-shadow:-4px -4px 2px #666666;}
+#kefalida{
+    height:30px;
+    margin:0px;
+    border:2px white solid;
+    margin-bottom: 20px;
+}
+#kefalida p{
+    height:30px;
+    margin:0px;
+    margin-top: 3px;
+    
+}
+#formone{padding-top:10px;}
+
+#display {
+margin:0px;
+border-radius: 15px;
+width:98%;
+height:40px;
+font-size:18px;
+color:black;
+margin:2px;
+border:2px inset grey;
+background-color:white;
+padding:2px;
+;}
+#mpales{
+    margin-top: 370px;
+}
+.grammh{
+    width: 100%;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    border:2px grey solid;
+    box-shadow:-1px -1px 2px grey;
+}
+.button {
+border:2px grey solid;
+background-color: white;
+border-radius: 100px;
+width:50px;
+height:50px;
+margin:1px;}
+
+.number {font-size:16px;
+font-weight:bold;}
+
+.opps {font-size:18px;}
+
+.three {font-weight:bold;
+background-color:grey;
+border:white 2px solid;
+}
+.three:hover{background-color:#F66;}
+</style>
+<script>
+
+flag = 0;
+
+function openpara(val)
+{
+calc.display.value+=val;
+flag+=1;
+}
+
+function closepara(valval)
+{
+calc.display.value+=valval;
+flag-=1;
+}
+
+function backspace(calc)
+{
+var size = calc.display.value.length;
+calc.display.value=calc.display.value.substring(0,size-1);
+}
+
+function Resetfunction(calc)
+{
+calc.display.value=' ';
+
+flag=0;
+}
+
+function cos_function()
+{
+flag+=1;
+calc.display.value+='Math.cos(';
+}
+
+function sin_function()
+{
+flag+=1;
+calc.display.value+='Math.sin(';
+}
+
+function tan_function()
+{
+flag+=1;
+calc.display.value+='Math.tan(';
+}
+
+function log_function()
+{
+flag+=1;
+calc.display.value+='Math.log(';
+}
+
+function sqrt_function()
+{
+flag+=1;
+calc.display.value+='Math.sqrt(';
+}
+
+function exp_function()
+{
+flag+=1;
+calc.display.value+='Math.exp(';
+}
+
+function fact(x)
+{
+factvar=1;
+for (i=1;i<=x;i++)
+{
+factvar=factvar*i;
+}
+return factvar;
+}
+
+function fact_function(x)
+{
+flag+=1;
+calc.display.value+='fact(';
+}
+
+function power_function(x)
+{
+flag+=1;
+calc.display.value+='Math.pow(x,y';
+}
+
+function evaluation(calc){
+    n = calc.display.value;
+    var size = calc.display.value.length;
+    var lastchar = calc.display.value.charAt(size)
+    if(isNaN(lastchar) && lastchar!=")" && lastchar!="!"){
+            calc.display.value="syntax error";}
+    else if(flag!=0){
+            calc.display.value="error:paranthesis";}
+    else {
+            result=eval(n);
+    calc.display.value=result;
+    }
+}
+
+</script>
+
+<script>
+var questions = new Array();
+var choices = new Array();
+var answers = new Array();
+
+
+var oxtw=Math.floor((Math.random() * 100))%9;
+var hexa=Math.floor((Math.random() * 100))%17;
+var deka=Math.floor((Math.random() * 100))%11;
+var twenty=Math.floor((Math.random() * 100))%21;
+var eksi=Math.floor((Math.random() * 100))%7;
+var baros1=16+twenty*0.2;
+var barossat2=18+twenty*0.2;
+var barossat3=17+deka*0.5;
+var barossat4=19+hexa*0.125
+var gwnia1=25+twenty*0.5;
+var ko1=(1-Math.sin(gwnia1*3.141592/180));
+var ko2=0.5+oxtw*0.05;
+var gwnia3=33+deka*0.5;
+var ocr3=2+eksi*0.2;
+var ko3=(1-Math.sin(gwnia3*3.141592/180))*Math.pow(ocr3,0.5);
+var gwnia4=30+hexa*0.20;
+var sv4max=500+25*hexa;
+var H1=4+hexa*0.25;
+var H2=6+hexa*0.25;
+var H3=5+twenty*0.4;
+var H4=8+hexa*0.25;
+/*ypologismos gia strwsh 1*/
+var sv1=baros1*H1/2;
+var sv1ton=baros1*H1/2;
+var sh1ton=sv1ton*ko1;
+var sh1=sh1ton;
+/*ypologismos gia strwsh 2*/
+var sv2=sv1+baros1*H1/2+barossat2*H2/2;
+var u2=10*H2/2;
+var sv2ton=sv2-u2;
+var sh2ton=sv2ton*ko2;
+var sh2=sh2ton+u2;
+/*ypologismos gia strwsh 3*/
+var sv3=sv2+barossat2*H2/2+barossat3*H3/2;
+var u3=u2+10*(H2+H3)/2;
+var sv3ton=sv3-u3;
+var sh3ton=sv3ton*ko3;
+var sh3=sh3ton+u3;
+/*ypologismos gia strwsh 4*/
+var sv4=sv3+barossat3*H3/2+barossat4*H4/2;
+var u4=u3+10*(H3+H4)/2;
+var sv4ton=sv4-u4;
+var ocr4=sv4max/sv4;
+var ko4=(1-Math.sin(gwnia4*3.141592/180))*Math.pow(ocr4,0.5);
+var sh4ton=sv4ton*ko4;
+var sh4=sh4ton+u4;
+/*===========erwthsh1================*/
+questions[0] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ολική τάση στο μέσο της πρώτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[0] = [sv1, sv1ton*1.5, sh1ton*1.5,sh1];
+answers[0] = [0];
+
+/*=========================================================================================================*/
+questions[1] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ενεργός τάση στο μέσο της πρώτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[1] = [baros1*H1/2, baros1*H1, baros1*H1/2-10*H1/2,baros1*H1-10*H1];
+answers[1] = [0];
+/*=========================================================================================================*/
+questions[2] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ενεργός τάση στο μέσο της πρώτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[2] = [sh1ton, baros1*H1*ko1, baros1*H1/2-10*H1/2,baros1*H1-10*H1];
+answers[2] = [0];
+/*=========================================================================================================*/
+questions[3] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ολική τάση στο μέσο της πρώτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[3] = [sh1ton, baros1*H1*ko1, baros1*H1/2-10*H1/2,baros1*H1-10*H1];
+answers[3] = [0];
+/*=========================================================================================================*/
+questions[4] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ολική τάση στο μέσο της δεύτερης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[4] = [sh2, sv1+barossat2*H2, sv2,sv2ton];
+answers[4] = [2];
+
+/*=========================================================================================================*/
+questions[5] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ενεργός τάση στο μέσο της δεύτερης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[5] = [sh2, sv1+barossat2*H2, sv2,sv2ton];
+answers[5] = [3];
+/*=========================================================================================================*/
+questions[6] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ενεργός τάση στο μέσο της δεύτερης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[6] = [sh2, sv1+barossat2*H2, sv2,sh2ton];
+answers[6] = [3];
+/*=========================================================================================================*/
+questions[7] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ολική τάση στο μέσο της δεύτερης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[7] = [sv1+barossat2*H2, sh2, sv2,sh2ton];
+answers[7] = [1];
+/*=========================================================================================================*/
+questions[8] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ολική τάση στο μέσο της τρίτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[8] = [sv3,sv3ton*1.05,sh3ton,sh3*0.9];
+answers[8] = [0];
+
+/*=========================================================================================================*/
+questions[9] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ενεργός τάση στο μέσο της τρίτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[9] = [0.96*sv3,sv3ton,1.05*sh3ton,sh3*0.9];
+answers[9] = [1];
+/*=========================================================================================================*/
+questions[10] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ενεργός τάση στο μέσο της τρίτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[10] = [0.96*sv3,1.1*sh3ton,sh3ton,sh3*0.9];
+answers[10] = [2];
+/*=========================================================================================================*/
+questions[11] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ολική τάση στο μέσο της τρίτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[11] = [0.96*sv3,sh3*0.9,sh3ton,sh3];
+answers[11] = [3];
+/*=========================================================================================================*/
+questions[12] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ολική τάση στο μέσο της τέταρτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[12] = [sh4*1.25,sv4,0.89*sv4,sv4ton];
+answers[12] = [1];
+
+/*=========================================================================================================*/
+questions[13] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η κατακόρυφη ενεργός τάση στο μέσο της τέταρτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[13] = [sh4ton*1.25,sv4,0.89*sv4ton,sv4ton];
+answers[13] = [3];
+/*=========================================================================================================*/
+questions[14] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ενεργός τάση στο μέσο της τέταρτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[14] = [sh4ton,sv4,0.89*sh4ton,sv4ton];
+answers[14] = [0];
+/*=========================================================================================================*/
+questions[15] = '<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος1 γ<span></span>='+baros1+' ΚΝ/m^3,    φ='+gwnia1+',  H1='+H1+'m</p>'
+              +'<p>Κανονικά στερεοποιημένη</p>'
+              +'<p>-------------------------------ΥΥΟ---------------------------</p>'
+              +'<p>Άμμος1 γ<span>sat</span>='+barossat2+' ΚΝ/m^3,   H2='+H2+'m</p>'
+              +'<p>K<span>o2</span>='+ko2+' </p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άργιλος2 γ<span>sat</span>='+barossat3+' ΚΝ/m^3,    φ='+gwnia3+',  H3='+H3+'m</p>'
+              +'<p>OCR='+ocr3+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p>Άμμος2 γ<span>sat</span>='+barossat4+' ΚΝ/m^3,    φ='+gwnia4+',  H4='+H4+'m</p>'
+              +'<p>σ΄<span>vmax</span>='+sv4max+'</p>'
+              +'<p>----------------------------------------------------------------</p>'
+              +'<p><a>Ποία είναι η οριζόντια ολική τάση στο μέσο της τέταρτης στρώσης;</a></p>'
+              +'<p>(δίνεται m=0.5)</p>'
+              +'<p>ΥΥΟ=υπόγειος υδροφόρος ορίζοντας</p>';
+
+choices[15] = [sh4*1.25,sh4,0.89*sv4ton,sv4ton];
+answers[15] = [1];
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+/*========index initialization=========*/
+var lastIndex=questions.length-1;
+var numberOfQuestions=questions.length;
+var tuxaio=Math.floor((Math.random() * 100));
+var tuxaioSwsto=tuxaio%numberOfQuestions;
+var numberOfQuestions1;
+var tuxaioSwsto1;
+var realIndex;
+var score = 0;
+var i= 0;
+
+var listQuestion = function(){
+    if(i<questions.length){
+        var deikths=(tuxaioSwsto+i);
+            realIndex=deikths%(numberOfQuestions);
+        document.getElementById("counter").innerHTML="<a>"+(i+1)+"/"+numberOfQuestions+"</a>";
+        document.getElementById("myDiv1").innerHTML = '<p>'+questions[i]+'</p>';
+        var lastIndex1=choices[realIndex].length-1;
+            numberOfQuestions1=choices[realIndex].length;
+        var tuxaio1=Math.floor((Math.random() * 100));
+            tuxaioSwsto1=tuxaio1%numberOfQuestions1;
+        var choicesOutput=[];//new Array()
+        for (var k=0; k<choices[realIndex].length; k++){
+            var deikths1=(tuxaioSwsto1+k);
+            var realIndex1=deikths1%(numberOfQuestions1);
+            choicesOutput.push(
+                '<p id="'+k+'" onClick="clickMyRadio('+k+')"><input type = "radio" name ='
+                +' "questionchoice">'+choices[i][realIndex1]+'</p>');
+        }
+
+        document.getElementById("myDiv2").innerHTML =choicesOutput.join("");
+
+        document.getElementById("myDiv3").innerHTML = 
+            '<p><button onClick = "getRadioValue()">Καταχώρηση απάντησης</button></p> <br>';
+    }
+};
+
+var getRadioValue = function(){
+    var elegxos=0;
+    var value = '';
+    var h;
+    for (var h = 0;  h < document.getElementsByName('questionchoice').length; h++){
+        if (document.getElementsByName('questionchoice')[h].checked==true){
+            value = h; 
+            elegxos=1;
+        }
+    }
+    //edw prepei na eksafaniseis kai to koumpi check gia na einai anagkasmenos o allos na paei sto epomeno
+    if (elegxos==0){
+
+    }else{
+        document.getElementById("myDiv3").innerHTML ="";
+        if (answers[i]==(tuxaioSwsto1+value)%numberOfQuestions1){
+            score++; 
+            for (var k=0; k<choices[i].length; k++){
+                 if (k==value){
+
+                }else{
+                      document.getElementById(k).innerHTML="...................."
+                }
+            }
+            document.getElementById(value).style.backgroundColor='green';
+            document.getElementById("myDiv3").innerHTML =
+            "<p><button input type = "
+            +"'submit' onClick = 'loadContent()'> Επόμενη Ερώτηση</button></p><br>";
+
+        }else {
+            for (var k=0; k<choices[realIndex].length; k++){
+                if (k==value){
+
+                }else{
+                      document.getElementById(k).innerHTML="...................."
+                }
+            }
+            document.getElementById(value).style.backgroundColor='red';
+           document.getElementById("myDiv3").innerHTML =
+           "<p><button input type = 'submit' onClick = 'loadContent()'> Επόμενη Ερώτηση"
+           +"</button></p><br>"; 
+        }
+        i++;
+    }
+    
+};
+var whatIsScore = function(){
+    return score; 
+};
+function loadContent(){
+    if (i==numberOfQuestions){
+        document.getElementById("myDiv1").innerHTML="<p><a onClick = 'loadContent1()'>"+score+"/"+numberOfQuestions+"</a></p>";
+        document.getElementById("myDiv1").id='lastMyDiv1';
+        document.getElementById("myDiv2").innerHTML="";
+        document.getElementById("myDiv2").id='lastMyDiv2';
+        document.getElementById("myDiv3").innerHTML="<p ><a>Για επανεκκίνηση κλικάρετε το αποτέλεσμα"
+           +"</a></p>";
+        document.getElementById("myDiv3").id='lastMyDiv3';
+        document.getElementById("myDiv4").innerHTML="";
+        document.getElementById("myDiv4").id='lastMyDiv4';
+        document.getElementById("counter").innerHTML="<p>Το σκορ σας είναι:</p>";
+        document.getElementById("counter").id='lastCounter';
+        document.getElementById("calculator").style.display="none";
+        
+    }else{
+        document.getElementById("myDiv3").innerHTML="";
+        listQuestion();
+    }
+    
+  
+}
+function loadContent1(){
+        document.getElementById("calculator").style.display="inline-block";
+        document.getElementById("lastMyDiv1").innerHTML="";
+        document.getElementById("lastMyDiv1").id='myDiv1';
+        document.getElementById("lastMyDiv2").innerHTML="";
+        document.getElementById("lastMyDiv2").id='myDiv2';
+        document.getElementById("myDiv2").style.marginTop="20px";
+        document.getElementById("lastMyDiv3").innerHTML="";
+        document.getElementById("lastMyDiv3").id='myDiv3';
+        document.getElementById("lastMyDiv4").innerHTML="";
+        document.getElementById("lastMyDiv4").id='myDiv4';
+        document.getElementById("lastCounter").innerHTML="<p id="+"'index'></p>";
+        document.getElementById("lastCounter").id='counter';
+        /*========index initialization=========*/
+        tuxaio=Math.floor((Math.random() * 100));
+        tuxaioSwsto=tuxaio%lastIndex;
+        score = 0;
+        i= 0;
+        listQuestion();
+}
+function clickMyRadio(kapa){
+    document.getElementsByName('questionchoice')[kapa].checked=true;
+}   
+
+window.onload = listQuestion;
+</script>
+</head>
+<body>
+<div id="header">
+    <div id="title">Τάσεις στο έδαφος</div>
+</div>
+<div id="counter">
+    <p id="index"></p>
+</div>
+<div id="myDiv1"></div> 
+<div id="calculator">
+<div id="form_wrapper">
+
+          <form id="formone" name="calc">
+              <div id="othoni">
+              <input id="display" type="text" name="display" value="" disabled contenteditable="false" ></input>
+              </div>
+              <br>
+              <div id="koumpia">
+              <input class="button number" type="button" value="1" onClick="calc.display.value+=1"></input>
+              <input class="button number" type="button" value="2" onClick="calc.display.value+=2"></input>
+              <input class="button number" type="button" value="3" onClick="calc.display.value+=3"></input>
+              <input class="button opps" type="button" value="*" onClick="calc.display.value+='*'"></input>           
+              <input class="button three" type="button" value="<-" onClick="backspace(this.form)"></input>
+              <input class="button three" type="button" value="C" onClick='Resetfunction(this.form)'></input>
+              <br>
+              <input class="button number" type="button" value="4" onClick="calc.display.value+=4"></input>
+              <input class="button number" type="button" value="5" onClick="calc.display.value+=5"></input>
+              <input class="button number" type="button" value="6" onClick="calc.display.value+=6"></input>
+              <input class="button opps" type="button" value="-" onClick="calc.display.value+='-'"></input>
+              <input class="button opps" type="button" value="%" onClick="calc.display.value+='%'"></input>
+              <input class="button" type="button" value="cos" onClick="cos_function()"></input>
+              <br> 
+
+
+              <input class="button number" type="button" value="7" onClick="calc.display.value+=7"></input>
+              <input class="button number" type="button" value="8" onClick="calc.display.value+=8"></input>
+              <input class="button number" type="button" value="9" onClick="calc.display.value+=9"></input>
+              <input class="button opps" type="button" value="/" onClick="calc.display.value+='/'"></input>
+              <input class="button" type="button" value="sqrt" onClick="sqrt_function()"></input>
+              <input class="button" type="button" value="sin" onClick="sin_function()"></input>
+              <br>
+              <input class="button opps" type="button" value="." onClick="calc.display.value+='.'"></input>
+              <input class="button number" type="button" value="0" onClick="calc.display.value+=0"></input>
+              <input class="button three" type="button" value="=" onClick="evaluation(this.form)"></input>
+              <input class="button opps" type="button" value="+" onClick="calc.display.value+='+'"></input>
+              <input class="button opps" type="button" value="," onClick="calc.display.value+=','"></input>
+              <input class="button" type="button" value="tan" onClick="tan_function()"></input>
+              <br>
+              <input class="button" type="button" value="EXP" onClick="exp_function()"></input>
+              <input class="button" type="button" value="pi" onClick="calc.display.value+=3.141592"></input>
+              <input class="button" type="button" value="x^y" onClick="power_function()"></input>
+              <input class="button" type="button" value="(" onClick="openpara(this.value)"></input>
+              <input class="button" type="button" value=")" onClick="closepara(this.value)"></input>
+              <input class="button" type="button" value="ln" onClick="log_function()"></input>
+              
+          </div>
+        
+          </form>
+
+        </div>
+        <div id="proxeiro">
+            <div id="kefalida"><p>Σημειώσεις</p></div>
+            <div id="proxeiro1">
+                <input type="text" value=" Οι τριγωνομετικές συναρτήσεις " class="grammh"></input>
+                <input type="text" value=" δέχονται ακτίνια." class="grammh"></input>
+                <input type="text" value=" Ως διαχωριστικό χρησιμοποείται " class="grammh"></input>
+                <input type="text" value=" η τελεία." class="grammh"></input>
+                <input type="text" class="grammh"></input>
+                <input type="text" class="grammh"></input>
+                <input type="text" class="grammh"></input>
+                <input type="text" class="grammh"></input>
+            </div>
+        </div>
+        
+
+    </div>
+<div id="myDiv2"></div>
+<div id="myDiv3"></div>
+<div id="myDiv4"></div>
+</body>
+</html>
