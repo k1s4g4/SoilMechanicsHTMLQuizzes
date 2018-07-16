@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Φυσικές Ιδιότητες των εδαφών</title>
+<link type="text/css" rel="stylesheet" href="">
+<style>
+            #header{
+                margin-top: 50px;
+                background-color: grey;
+                border-radius: 15px;
+                margin-left:25%;
+                margin-right:25%;
+                border:3px white solid;
+                box-shadow:-2px -2px 15px 3px grey;
+            }
+            #title{
+                user-select:none;
+                font-size: 60px;
+                margin-top: 5px;
+                margin-left:0%;
+                margin-right:0%;
+                text-shadow:-4px -2px 2px rgba(0, 0, 0, 1);
+            }
+            #counter{
+                margin-left:25% ;
+                margin-right:25%;
+                height: 40px;
+                vertical-align: center;
+                border: 1px dashed black;
+                margin-bottom: 30px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            #counter a{
+                user-select:none;
+                padding:5px;
+                margin-top:13.5px;
+                margin-bottom: 13.5px;
+                font-size:35px;
+                border-radius: 15px;
+                border:2px solid white;
+                background-color: grey;
+                color:white;
+                box-shadow:-2px -2px 15px 3px grey;
+                text-shadow:-2px -2px 2px rgba(0, 0, 0, 1);;
+            }
+            /*=====================================================*/
+            /*=====================================================*/
+            /*=====================LAST SCREEN=====================*/
+            /*=====================================================*/
+            /*=====================================================*/
+            #lastCounter{
+                user-select:none;
+                font-size: 60px;
+                border-radius: 15px;
+                border:2px white solid;
+                background-color: grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                color:white;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-shadow:-4px -4px 2px rgba(0, 0, 0, 1);
+
+
+
+                margin-top: 100px;
+                height:70px;
+                margin-left:30% ;
+                margin-right:30%;
+            }
+            #lastCounter p{
+                margin-top: 0px;
+                margin-bottom: 0px;
+
+            }
+            #lastMyDiv1{
+                margin-left:0px;
+                margin-right:0px;
+                margin-top:120px;
+                margin-bottom: 120px;
+                border-radius:0px;
+                text-align: center;
+            }
+            #lastMyDiv1 p{
+                margin-right:0px;
+                margin-left: 0px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                user-select:none;
+                color:white;
+                font-size: 100px;
+            }
+            #lastMyDiv1 a{
+                border:2px solid grey;
+                padding: 30px;
+                border-radius:250px;
+                background-color: black;
+                color:grey;
+                cursor:pointer;
+                box-shadow: -4px -4px 15px 2px grey;
+                transition: all 0.3s linear;
+            }
+            #lastMyDiv1 a:hover{
+                box-shadow: -2px -2px 25px 4px white;
+                color:rgba(255,255,255,0.85);
+            }
+            #lastMyDiv2{
+                margin-top:00px;
+            }
+            #lastMyDiv2 p {
+                user-select:none;
+                background-color: black;
+                color:black;
+                padding: 10px;
+                font-size: 35px;
+                margin-top:0px;
+                margin-left:35% ;
+                margin-right:35%;
+            }
+            #lastMyDiv3 a{
+                user-select:none;
+                font-size: 20px;
+                border-radius: 15px;
+                background-color: black;
+                color:grey;
+                padding:5px;
+                margin-top: 50px;
+
+
+
+                height:30px;
+            }
+            #lastMyDiv3{
+               margin-left:35% ;
+                margin-right:35%;
+            }
+
+            #lastMyDiv3 p:hover{
+                
+            }
+
+            /*=====================================================*/
+            /*=====================================================*/
+            /*==================END OF LAST SCREEN=================*/
+            /*=====================================================*/
+            /*=====================================================*/
+            #myDiv4 button{
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 25px;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            #mydiv3 p{
+                border: black;
+            }
+            #myDiv3 button{
+                user-select:none;
+                padding: 10px;
+                font-size: 20px;
+                width:100%;
+                border-radius: 15px;
+                border:2px white solid;
+                background-color: grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                color:white;
+                margin-top: 50px;
+               
+                transition: all 0.3s linear;
+            }
+            #myDiv3 button:hover{
+                border:2px white solid;
+                background-color:grey;
+                color:white;
+                cursor: pointer;
+                box-shadow: -4px -4px 15px 2px grey;
+                text-shadow:-3px -1.5px 2px rgba(0, 0, 0, 1);
+                transform:scaleX(1.02);
+            }
+            #mydiv3 button:active{
+                transorm:scaleY(1.04);
+            }
+            #myDiv1{
+                user-select:none;
+                margin-top:0px;
+                background-color: white;
+                color:black;
+                border:2px solid grey;
+                font-size: 25px;
+                margin-bottom:50px;
+                box-shadow: -4px -4px 15px 2px white;
+            }
+            @keyframes show{
+                from{background-color: black}
+                to{background-color: white}
+            }
+            #myDiv2 p{
+                font-size: 20px;
+                user-select:none;
+                background-color: black;
+                color:black;
+                padding: 10px;
+                border:2px solid grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                cursor: pointer;
+                transition: all 0.2s linear;
+            }
+            #myDiv2 p:hover{
+                background-color: white;
+                transform:scaleX(1.02);
+            }
+            #myDiv2 p:active{
+                background-color: rgba(255,255,255,0.85);
+                transform:scaleY(1.04);
+            }
+        
+            div{
+                margin-left:25% ;
+                margin-right:25%;
+                /*border:1px dashed white;*/
+                margin-bottom: 5px;
+                border-radius: 25px;
+            }
+            body{
+                margin: 0;
+                background-color: black;
+                text-align: center;
+                color:white;
+                font-size:20px;
+            }
+            p { 
+                border-radius: 15px;
+            }
+            input{
+                float:left;
+            }
+            span{
+                font-size: 14px;
+            }
+</style>
+
+<script>
+var questions = new Array();
+var choices = new Array();
+var answers = new Array();
+
+/*===========erwthsh1================*/
+
+questions[0] = 'Ποιά είναι η σύσταση του εδάφους;';
+choices[0] = ['Στερεοί Κόκκοι,Νερό,Αέρας', 'Αμμος,Αργιλος,Νερό', 'Χαλίκι,Γαρμπίλι,Αμμος,Αέρας,Νερό','Αμμος,Ιλύς,Αργιλος,Νερό,Αέρας'];
+answers[0] = [0];
+
+/*===========erwthsh2================*/
+
+questions[1] = 'Πως ορίζεται το φαινόμενο ειδικό βάρος;';
+choices[1] = ['(Μάζα Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Ξηρού Δοκιμίου)/(Όγκος Στερεών Κόκκων)', '(Μάζα Κορεσμένου Δοκιμίου)/(Όγκος Δοκιμίου)'];
+answers[1] = [1];
+
+/*===========erwthsh3================*/
+questions[2] = 'Πως ορίζεται το πορώδες;';
+choices[2] = ['(Όγκος Κενών)/(Όγκος Δοκιμίου)', '(Όγκος Κενών)/(Όγκος Στερεών Κόκκων)', '(Όγκος Στερεών Κόκκων)/(Όγκος Δοκιμίου)', '(Βάρος Κενών)/(Βάρος Δοκιμίου)'];
+answers[2] = [0];
+
+/*===========erwthsh4================*/
+questions[3] = 'Πως ορίζεται το ειδικό βάρος των στερεών κόκκων;';
+choices[3] = ['(Μάζα Στερεών Κόκκων)/(Όγκος Δοκιμίου)', '(Βάρος Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Ξηρού Δοκιμίου)/(Όγκος Στερεών Κόκκων)', '(Βάρος Στερεών Κόκκων)/(Όγκος Δοκιμίου)'];
+answers[3] = [2];
+/*===========erwthsh5================*/
+questions[4] = 'Πως συμβολίζεται η μάζα των στερεών κόκκων;';
+choices[4] = ['Μ<span>s</span>', 'M<span></span>', 'W<span>s</span>', 'M<span>w</span>'];
+answers[4] = [0];
+
+
+/*===========erwthsh6================*/
+questions[5] = 'Πως συμβολίζεται η ξηρή φαινόμενη πυκνότητα;';
+choices[5] = ['ρ<span>s</span>', 'ρ', 'ρ<span>d</span>', 'γ<span>ξ</span>'];
+answers[5] = [2];
+
+
+/*===========erwthsh7================*/
+questions[6] = 'Πως ορίζεται ο δείκτης πόρων;';
+choices[6] = ['(Όγκος Κενών)/(Όγκος Δοκιμίου)', '(Όγκος Κενών)/(Όγκος Στερεών Κόκκων)', '(Όγκος Στερεών Κόκκων)/(Όγκος Δοκιμίου)', '(Βάρος Κενών)/(Βάρος Δοκιμίου)'];
+answers[6] = [1];
+/*===========erwthsh8================*/
+questions[7] = 'Πως συμβολίζεται το ξηρό φαινόμενο ειδικό βάρος;';
+choices[7] = ['γ<span>s</span>', 'γ', 'γ<span>d</span>', 'γ<span>ξ</span>'];
+answers[7] = [2];
+/*===========erwthsh9================*/
+questions[8] = 'Πως ορίζεται ο βαθμός κορεσμού;';
+choices[8] = ['(Όγκος Κενών)/(Όγκος Νερού)', '(Όγκος Κενών)/(Όγκος Στερεών Κόκκων)', '(Όγκος Νερού)/(Όγκος Κενών)', '(Βάρος Νερού)/(Βάρος Κενών)'];
+answers[8] = [2];
+/*===========erwthsh10================*/
+questions[9] = 'Πως συμβολίζεται ο όγκος των κενών;';
+choices[9] = ['V<span>s</span>', 'V', 'V<span>v</span>', 'V<span>w</span>'];
+answers[9] = [2];
+/*===========erwthsh11================*/
+questions[10] = 'Πως ορίζεται η φαινόμενη πυκνότητα;';
+choices[10] = ['(Μάζα Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Ξηρού Δοκιμίου)/(Όγκος Στερεών Κόκκων)', '(Μάζα Κορεσμένου Δοκιμίου)/(Όγκος Δοκιμίου)'];
+answers[10] = [0];
+/*===========erwthsh12================*/
+questions[11] = 'Πως συμβολίζεται το πορώδες;';
+choices[11] = ['n', 'e', 'Sr', 'Vv'];
+answers[11] = [0];
+/*===========erwthsh13================*/
+questions[12] = 'Πως ορίζεται η ξηρή φαινόμενη πυκνότητα;';
+choices[12] = ['(Μάζα Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Δοκιμίου)/(Όγκος Δοκιμίου)', '(Μάζα Ξηρού Δοκιμίου)/(Όγκος Στερεών Κόκκων)', '(Μάζα Στερεών Κόκκων)/(Όγκος Δοκιμίου)'];
+answers[12] = [3];
+/*===========erwthsh14================*/
+questions[13] = 'Πως συμβολίζεται o δείκτης πόρων;';
+choices[13] = ['n', 'e', 'Sr', 'w'];
+answers[13] = [1];
+/*===========erwthsh15================*/
+questions[14] = 'Πως συμβολίζεται η μάζα του δοκιμίου;';
+choices[14] = ['Μ<span>d</span>', 'M<span>a</span>', 'W<span></span>', 'M<span></span>'];
+answers[14] = [3];
+
+
+/*===========erwthsh16================*/
+questions[15] = 'Πως συμβολίζεται ο βαθμός κορεσμού;';
+choices[15] = ['Dr', 'Vr', 'Sr', 'W<span>w</span>'];
+answers[15] = [2];
+/*===========erwthsh17================*/
+questions[16] = 'Πως συμβολίζεται το φαινόμενο ειδικό βάρος;';
+choices[16] = ['γ<span>s</span>', 'γ', 'γ<span>d</span>', 'γ<span>w</span>'];
+answers[16] = [1];
+/*===========erwthsh18================*/
+questions[17] = 'Πως ορίζεται η υγρασία;';
+choices[17] = ['(Βάρος Νερού)/(Βάρος Στερεών Κόκκων)', 'Και τα 3 είναι σωστά', '(Μάζα Νερού)/(Μάζα Ξηρού Δοκιμίου)', '(Βάρος Νερού)/(Βάρος Ξηρού Δοκιμίου)'];
+answers[17] = [1];
+
+
+/*===========erwthsh19================*/
+questions[18] = 'Πως συμβολίζεται η φαινόμενη πυκνότητα;';
+choices[18] = ['ρ<span>s</span>', 'ρ', 'ρ<span>d</span>', 'ρ<span>w</span>'];
+answers[18] = [1];
+/*===========erwthsh20================*/
+questions[19] = 'Πως συμβολίζεται το βάρος των ξηρού δοκιμίου;';
+choices[19] = ['Μ<span>d</span>', 'W<span>d</span>', 'W<span></span>', 'W<span>w</span>'];
+answers[19] = [1];
+
+
+/*===========erwthsh21================*/
+questions[20] = 'Πως συμβολίζεται το ειδικό βάρος των στερεών κόκκων;';
+choices[20] = ['γ<span>s</span>', 'γ', 'γ<span>d</span>', 'γ<span>sat</span>'];
+answers[20] = [0];
+/*===========erwthsh22================*/
+questions[21] = 'Πως συμβολίζεται η πυκνότητα των στερεών κόκκων;';
+choices[21] = ['ρ<span>s</span>', 'ρ', 'ρ<span>d</span>', 'ρ<span>sat</span>'];
+answers[21] = [0];
+/*===========erwthsh23================*/
+questions[22] = 'Πως συμβολίζεται ο όγκος του δοκιμίου;';
+choices[22] = ['V<span>s</span>', 'V', 'V<span>v</span>', 'V<span>w</span>'];
+answers[22] = [1];
+/*===========erwthsh24================*/
+questions[23] = 'Πως ορίζεται η πυκνότητα των στερεών κόκκων;';
+choices[23] = ['(Μάζα Στερεών Κόκκων)/(Όγκος Δοκιμίου)', '(Βάρος Δοκιμίου)/(Όγκος Δοκιμίου)', '(Μάζα Ξηρού Δοκιμίου)/(Όγκος Στερεών Κόκκων)', '(Βάρος Στερεών Κόκκων)/(Όγκος Δοκιμίου)'];
+answers[23] = [2];
+
+/*===========erwthsh25================*/
+questions[24] = 'Πως ορίζεται το ξηρό φαινόμενο ειδικό βάρος;';
+choices[24] = ['(Μάζα Ξηρού Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Ξηρού Δοκιμίου)/(Όγκος Στερεών Κόκκων)', '(Βάρος Ξηρού Δοκιμίου)/(Όγκος Δοκιμίου)'];
+answers[24] = [3];
+/*===========erwthsh26================*/
+questions[25] = 'Πως συμβολίζεται ο όγκος του νερού;';
+choices[25] = ['V<span>s</span>', 'V<span>a</span>', 'V<span>v</span>', 'V<span>w</span>'];
+answers[25] = [3];
+/*===========erwthsh27================*/
+questions[26] = 'Πως συμβολίζεται η υγρασία;';
+choices[26] = ['n', 'γ<span>w</span>', 'Sr', 'w'];
+answers[26] = [3];
+/*===========erwthsh28================*/
+questions[27] = 'Πως συμβολίζεται η μάζα του ξηρού δοκιμίου;';
+choices[27] = ['Μ<span>d</span>', 'M<span>v</span>', 'W<span>d</span>', 'M<span>w</span>'];
+answers[27] = [0];
+/*===========erwthsh29================*/
+questions[28] = 'Πως ορίζεται το κορεσμένο φαινόμενο ειδικό βάρος;';
+choices[28] = ['(Μάζα Στερεών Κόκκων)/(Όγκος Δοκιμίου)', '(Βάρος Κορεσμένου Δοκιμίου)/(Όγκος Δοκιμίου)', '(Βάρος Ξηρού Δοκιμίου)/(Όγκος Στερεών Κόκκων)', '(Μάζα Κορεσμένου Δοκιμίου)/(Όγκος Δοκιμίου)'];
+answers[28] = [1];
+/*===========erwthsh30================*/
+questions[29] = 'Ποια σχέση συνδέει τη μάζα των στερεών κόκκων με την μάζα ξηρού δοκιμίου;';
+choices[29] = ['(Μάζα Στερεών Κόκκων)>(Μάζα Ξηρού Δοκιμίου)', '(Μάζα Στερεών Κόκκων)<(Μάζα Ξηρού Δοκιμίου)', '(Μάζα Στερεών Κόκκων)=(Μάζα Ξηρού Δοκιμίου)', '(Μάζα Στερεών Κόκκων)=2*(Μάζα Ξηρού Δοκιμίου)'];
+answers[29] = [2];
+/*===========erwthsh31================*/
+questions[30] = 'Πως συμβολίζεται η μάζα του νερού;';
+choices[30] = ['Μ<span>s</span>', 'M<span></span>', 'W<span>s</span>', 'M<span>w</span>'];
+answers[30] = [3];
+/*===========erwthsh32================*/
+questions[31] = 'Πως συμβολίζεται το βάρος του νερού;';
+choices[31] = ['Μ<span>s</span>', 'M<span>w</span>', 'W<span>s</span>', 'W<span>w</span>'];
+answers[31] = [3];
+/*===========erwthsh33================*/
+questions[32] = 'Πως συμβολίζεται το βάρος του δοκιμίου;';
+choices[32] = ['Μ<span></span>', 'W<span></span>', 'W<span>s</span>', 'M<span>w</span>'];
+answers[32] = [1];
+/*===========erwthsh34================*/
+questions[33] = 'Πως συμβολίζεται το βάρος των στερεών κόκκων;';
+choices[33] = ['Μ<span>s</span>', 'W<span></span>', 'W<span>s</span>', 'W<span>w</span>'];
+answers[33] = [2];
+/*===========erwthsh35================*/
+/*===========erwthsh36================*/
+/*===========erwthsh37================*/
+/*===========erwthsh38================*/
+/*===========erwthsh39================*/
+/*========index initialization=========*/
+var lastIndex=questions.length-1;
+var numberOfQuestions=questions.length;
+var tuxaio=Math.floor((Math.random() * 100));
+var tuxaioSwsto=tuxaio%numberOfQuestions;
+console.log(tuxaioSwsto)
+var numberOfQuestions1;
+var tuxaioSwsto1;
+var realIndex;
+var score = 0;
+var i= 0;
+
+var listQuestion = function(){
+    if(i<questions.length){
+        var deikths=(tuxaioSwsto+i);
+            realIndex=deikths%(numberOfQuestions);
+        document.getElementById("counter").innerHTML="<a>"+(i+1)+"/"+numberOfQuestions+"</a>";
+        document.getElementById("myDiv1").innerHTML = '<p>'+questions[realIndex]+'</p>';
+        var lastIndex1=choices[realIndex].length-1;
+            numberOfQuestions1=choices[realIndex].length;
+        var tuxaio1=Math.floor((Math.random() * 100));
+            tuxaioSwsto1=tuxaio1%numberOfQuestions1;
+        var choicesOutput=[];//new Array()
+        for (var k=0; k<choices[realIndex].length; k++){
+            var deikths1=(tuxaioSwsto1+k);
+            var realIndex1=deikths1%(numberOfQuestions1);
+            choicesOutput.push(
+                '<p id="'+k+'" onClick="clickMyRadio('+k+')"><input type = "radio" name ='
+                +' "questionchoice">'+choices[realIndex][realIndex1]+'</p>');
+        }
+
+        document.getElementById("myDiv2").innerHTML =choicesOutput.join("");
+
+        document.getElementById("myDiv3").innerHTML = 
+            '<p><button onClick = "getRadioValue()">Καταχώρηση Απάντησης</button></p> <br>';
+    }
+};
+
+var getRadioValue = function(){
+    var elegxos=0;
+    var value = '';
+    var h;
+    for (var h = 0;  h < document.getElementsByName('questionchoice').length; h++){
+        if (document.getElementsByName('questionchoice')[h].checked==true){
+            value = h; 
+            elegxos=1;
+        }
+    }
+    //edw prepei na eksafaniseis kai to koumpi check gia na einai anagkasmenos o allos na paei sto epomeno
+    if (elegxos==0){
+
+    }else{
+        document.getElementById("myDiv3").innerHTML ="";
+        if (answers[realIndex]==(tuxaioSwsto1+value)%numberOfQuestions1){
+            score++; 
+            for (var k=0; k<choices[realIndex].length; k++){
+                  if (k==value){
+
+                }else{
+                      document.getElementById(k).innerHTML="...................."
+                }
+            }
+            document.getElementById(value).style.backgroundColor='green';
+            document.getElementById("myDiv3").innerHTML =
+            "<p><button input type = "
+            +"'submit' onClick = 'loadContent()'> Επόμενη Ερώτηση</button></p><br>";
+
+        }else {
+            for (var k=0; k<choices[realIndex].length; k++){
+                  if (k==value){
+
+                }else{
+                      document.getElementById(k).innerHTML="...................."
+                }
+            }
+            document.getElementById(value).style.backgroundColor='red';
+           document.getElementById("myDiv3").innerHTML =
+           "<p><button input type = 'submit' onClick = 'loadContent()'> Επόμενη Ερώτηση"
+           +"</button></p><br>"; 
+        }
+        i++;
+    }
+    
+};
+var whatIsScore = function(){
+    return score; 
+};
+function loadContent(){
+    if (i==numberOfQuestions){
+        document.getElementById("myDiv1").innerHTML="<p><a onClick = 'loadContent1()'>"+score+"/"+numberOfQuestions+"</a></p>";
+        document.getElementById("myDiv1").id='lastMyDiv1';
+        document.getElementById("myDiv2").innerHTML="";
+        document.getElementById("myDiv2").id='lastMyDiv2';
+        document.getElementById("myDiv3").innerHTML="<p ><a>Για επανεκκίνηση κλικάρετε το αποτέλεσμα"
+           +"</a></p>";
+        document.getElementById("myDiv3").id='lastMyDiv3';
+        document.getElementById("myDiv4").innerHTML="";
+        document.getElementById("myDiv4").id='lastMyDiv4';
+        document.getElementById("counter").innerHTML="<p>Το σκορ σας είναι:</p>";
+        document.getElementById("counter").id='lastCounter';
+        
+    }else{
+        document.getElementById("myDiv3").innerHTML="";
+        listQuestion();
+    }
+    
+  
+}
+function loadContent1(){
+
+        document.getElementById("lastMyDiv1").innerHTML="";
+        document.getElementById("lastMyDiv1").id='myDiv1';
+        document.getElementById("lastMyDiv2").innerHTML="";
+        document.getElementById("lastMyDiv2").id='myDiv2';
+        document.getElementById("lastMyDiv3").innerHTML="";
+        document.getElementById("lastMyDiv3").id='myDiv3';
+        document.getElementById("lastMyDiv4").innerHTML="";
+        document.getElementById("lastMyDiv4").id='myDiv4';
+        document.getElementById("lastCounter").innerHTML="<p id="+"'index'></p>";
+        document.getElementById("lastCounter").id='counter';
+        /*========index initialization=========*/
+        tuxaio=Math.floor((Math.random() * 100));
+        tuxaioSwsto=tuxaio%lastIndex;
+        score = 0;
+        i= 0;
+        listQuestion();
+}
+function clickMyRadio(kapa){
+    document.getElementsByName('questionchoice')[kapa].checked=true;
+}   
+
+window.onload = listQuestion;
+</script>
+</head>
+<body>
+<div id="header">
+    <div id="title">Φυσικές ιδιότητες των εδαφών 1</div>
+</div>
+<div id="counter">
+    <p id="index"></p>
+</div>
+<div id="myDiv1"></div> 
+<div id="myDiv2"></div>
+<div id="myDiv3"></div>
+<div id="myDiv4"></div>
+</body>
+</html>

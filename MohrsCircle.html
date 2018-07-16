@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Κύκλος του Mohr</title>
+<link type="text/css" rel="stylesheet" href="">
+<style>
+            #header{
+                margin-top: 50px;
+                background-color: grey;
+                border-radius: 15px;
+                margin-left:25%;
+                margin-right:25%;
+                border:3px white solid;
+                box-shadow:-2px -2px 15px 3px grey;
+            }
+            #title{
+                user-select:none;
+                font-size: 60px;
+                margin-top: 5px;
+                margin-left:0%;
+                margin-right:0%;
+                text-shadow:-4px -2px 2px rgba(0, 0, 0, 1);
+            }
+            #counter{
+                margin-left:25% ;
+                margin-right:25%;
+                height: 40px;
+                vertical-align: center;
+                border: 1px dashed black;
+                margin-bottom: 30px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            #counter a{
+                user-select:none;
+                padding:5px;
+                margin-top:13.5px;
+                margin-bottom: 13.5px;
+                font-size:35px;
+                border-radius: 15px;
+                border:2px solid white;
+                background-color: grey;
+                color:white;
+                box-shadow:-2px -2px 15px 3px grey;
+                text-shadow:-2px -2px 2px rgba(0, 0, 0, 1);;
+            }
+            /*=====================================================*/
+            /*=====================================================*/
+            /*=====================LAST SCREEN=====================*/
+            /*=====================================================*/
+            /*=====================================================*/
+            #lastCounter{
+                user-select:none;
+                font-size: 60px;
+                border-radius: 15px;
+                border:2px white solid;
+                background-color: grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                color:white;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-shadow:-4px -4px 2px rgba(0, 0, 0, 1);
+
+
+
+                margin-top: 100px;
+                height:70px;
+                margin-left:30% ;
+                margin-right:30%;
+            }
+            #lastCounter p{
+                margin-top: 0px;
+                margin-bottom: 0px;
+
+            }
+            #lastMyDiv1{
+                margin-left:0px;
+                margin-right:0px;
+                margin-top:120px;
+                margin-bottom: 120px;
+                border-radius:0px;
+                text-align: center;
+            }
+            #lastMyDiv1 p{
+                margin-right:0px;
+                margin-left: 0px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                user-select:none;
+                color:white;
+                font-size: 100px;
+            }
+            #lastMyDiv1 a{
+                border:2px solid grey;
+                padding: 30px;
+                border-radius:250px;
+                background-color: black;
+                color:grey;
+                cursor:pointer;
+                box-shadow: -4px -4px 15px 2px grey;
+                transition: all 0.3s linear;
+            }
+            #lastMyDiv1 a:hover{
+                box-shadow: -2px -2px 25px 4px white;
+                color:rgba(255,255,255,0.85);
+            }
+            #lastMyDiv2{
+                margin-top:00px;
+            }
+            #lastMyDiv2 p {
+                user-select:none;
+                background-color: black;
+                color:black;
+                padding: 10px;
+                font-size: 35px;
+                margin-top:0px;
+                margin-left:35% ;
+                margin-right:35%;
+            }
+            #lastMyDiv3 a{
+                user-select:none;
+                font-size: 20px;
+                border-radius: 15px;
+                background-color: black;
+                color:grey;
+                padding:5px;
+                margin-top: 50px;
+
+
+
+                height:30px;
+            }
+            #lastMyDiv3{
+               margin-left:35% ;
+                margin-right:35%;
+            }
+
+            #lastMyDiv3 p:hover{
+                
+            }
+
+            /*=====================================================*/
+            /*=====================================================*/
+            /*==================END OF LAST SCREEN=================*/
+            /*=====================================================*/
+            /*=====================================================*/
+            #myDiv4 button{
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 25px;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            #mydiv3 p{
+                border: black;
+            }
+            #myDiv3 button{
+                user-select:none;
+                padding: 10px;
+                font-size: 20px;
+                width:100%;
+                border-radius: 15px;
+                border:2px white solid;
+                background-color: grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                color:white;
+                margin-top: 50px;
+               
+                transition: all 0.3s linear;
+            }
+            #myDiv3 button:hover{
+                border:2px white solid;
+                background-color:grey;
+                color:white;
+                cursor: pointer;
+                box-shadow: -4px -4px 15px 2px grey;
+                text-shadow:-3px -1.5px 2px rgba(0, 0, 0, 1);
+                transform:scaleX(1.02);
+            }
+            #mydiv3 button:active{
+                transorm:scaleY(1.04);
+            }
+            #myDiv1{
+                user-select:none;
+                margin-top:0px;
+                background-color: white;
+                color:black;
+                border:2px solid grey;
+                font-size: 25px;
+                margin-bottom:50px;
+                box-shadow: -4px -4px 15px 2px white;
+            }
+        
+            }
+            @keyframes show{
+                from{background-color: black}
+                to{background-color: white}
+            }
+            #myDiv2 p{
+                font-size: 20px;
+                user-select:none;
+                background-color: black;
+                color:black;
+                padding: 10px;
+                border:2px solid grey;
+                box-shadow: -4px -4px 15px 2px grey;
+                cursor: pointer;
+                transition: all 0.2s linear;
+            }
+            #myDiv2 p:hover{
+                background-color: white;
+                transform:scaleX(1.02);
+            }
+            #myDiv2 p:active{
+                background-color: rgba(255,255,255,0.85);
+                transform:scaleY(1.04);
+            }
+        
+            div{
+                margin-left:25% ;
+                margin-right:25%;
+                /*border:1px dashed white;*/
+                margin-bottom: 5px;
+                border-radius: 25px;
+            }
+            body{
+                margin: 0;
+                background-color: black;
+                text-align: center;
+                color:white;
+                font-size:20px;
+            }
+            p { 
+                border-radius: 15px;
+            }
+            input{
+                float:left;
+            }
+            span{
+                font-size: 14px;
+            }
+          
+</style>
+
+<script>
+var questions = new Array();
+var choices = new Array();
+var answers = new Array();
+
+/*===========erwthsh1==============================================================================================*/
+questions[0] = 'Τι περιγράφει ένα σημείου του χώρου σ-τ;';
+choices[0] = ['Την φορτιστική κατάσταση μιας απειροστής επιφάνειας', 'Την φορτιστική κατάσταση και την διεύθυνση μιας απειροστής επιφάνειας', 'Την διεύθυνση μιας απειροστής επιφάνειας','Την φορτιστική κατάσταση ενός απειροστού στοιχείου'];
+answers[0] = [0];
+
+/*===========erwthsh===============================================================================================*/
+questions[1] = 'Τι περιγράφει ένα σημείου του χώρου σ-τ αν γνωρίζουμε και τον πόλο;';
+choices[1] = ['Την φορτιστική κατάσταση μιας απειροστής επιφάνειας', 'Την φορτιστική κατάσταση και την διεύθυνση μιας απειροστής επιφάνειας', 'Την διεύθυνση μιας απειροστής επιφάνειας','Την φορτιστική κατάσταση ενός απειροστού στοιχείου'];
+answers[1] = [1];
+/*===========erwthsh===============================================================================================*/
+questions[2] = 'Τι περιγράφει ένα ζεύγος αντιδιαμετρικών σημείων του κύκλου του Mohr;';
+choices[2] = ['Την φορτιστική κατάσταση μιας απειροστής επιφάνειας', 'Την φορτιστική κατάσταση και την διεύθυνση ενός απειροστού στοιχείου', 'Την διεύθυνση ενός απειροστού στοιχείου','Την φορτιστική κατάσταση ενός απειροστού στοιχείου'];
+answers[2] = [3];
+/*===========erwthsh===============================================================================================*/
+questions[3] = 'Τι περιγράφει ένα ζεύγος αντιδιαμετρικών σημείων του κύκλου του Mohr αν γνωρίζουμε και τον πόλο;';
+choices[3] = ['Την φορτιστική κατάσταση μιας απειροστής επιφάνειας', 'Την φορτιστική κατάσταση και την διεύθυνση ενός απειροστού στοιχείου', 'Την διεύθυνση ενός απειροστού στοιχείου','Την φορτιστική κατάσταση ενός απειροστού στοιχείου'];
+answers[3] = [1];
+/*===========erwthsh===============================================================================================*/
+questions[4] = 'Ποιά η ιδιότητα κάθε ευθείας που διέρχεται απο τον πόλο;';
+choices[4] = ['Η διεύθυνσή της στο χώρο σ-τ ταυτίζεται με την πραγματική της διεύθυνση', 'Τέμνει τον κύκλο πάντα σε δύο σημεία', 'Είναι πάντα ο οριζόντιος άξονας','Εκφραζει την κλίση του κύκλου σε εκείνο το σημείο'];
+answers[4] = [0];
+/*===========erwthsh===============================================================================================*/
+questions[5] = 'Τι εκφράζει μια ευθεία που διέρχεται απο τον πόλο και ένα σημείο (σ<span>a</span>,τ);';
+choices[5] = ['Τον προσανατολισμό της απειροστής επιφάνειας με φόρτιση (σ<span>a</span>,0)', 'Την φορτιστική κατάσταση του απειροστού στοιχείου', 'Τον προσανατολισμό της απειροστής επιφάνειας με φόρτιση (σ<span>a</span>,τ)','Τον προσανατολισμό της απειροστής επιφάνειας με φόρτιση (0,τ)'];
+answers[5] = [2];
+/*===========erwthsh===============================================================================================*/
+questions[6] = 'Ο κύκλος του Mohr είναι ένας γεωμετρικός τόπος που εκφράζει:';
+choices[6] = ['Την φορτιστική κατάσταση απειροστού στοιχείου οποιασδήποτε διεύθυνσης', 'Το σύνολο των επιφανειών οποιασδήποτε φόρτισης', 'Το σύνολο των διευθύνσεων απειροστού στοιχείου οποιασδήποτε φόρτισης','Τίποτα από τα υπόλοιπα'];
+answers[6] = [0];
+/*===========erwthsh===============================================================================================*/
+questions[7] = 'Πως συμβολίζονται οι κύριες τάσεις;';
+choices[7] = ['σ<span>k2</span>,σ<span>k1</span>', 'σ<span>a</span>,σ<span>b</span>', 'σ<span>1</span>,σ<span>3</span>','σ<span>max</span>,σ<span>min</span>'];
+answers[7] = [2];
+/*===========erwthsh===============================================================================================*/
+questions[8] = 'Ποιές είναι οι συντεταγμένες του κέντρου του κύκλου του Mohr αν Α(σ<span>α</span>,τ) και Β(σ<span>β</span>,-τ) δύο αντιδιαμετρικά σημεία του;';
+choices[8] = ['(σ<span>α</span>,0)', '(((σ<span>α</span>-σ<span>β</span>)/2,0))', '((σ<span>α</span>+σ<span>β</span>)/2,0)','((σ<span>α</span>+σ<span>β</span>)/2,τ)'];
+answers[8] = [2];
+/*===========erwthsh===============================================================================================*/
+questions[9] = 'Με τι ισούται η ακτίνα του κύκλου του Mohr αν Α(σ<span>α</span>,τ) και Β(σ<span>β</span>,-τ) δύο αντιδιαμετρικά σημεία του;';
+choices[9] = ['((σ<span>α</span>+σ<span>β</span>)/2)^2+τ^2)^0.5', '((σ<span>α</span>-σ<span>β</span>)/2)^2+τ^2)', '((σ<span>α</span>-σ<span>β</span>)/2)^2+τ^2)^0.5','(σ<span>α</span>-σ<span>β</span>)/2'];
+answers[9] = [2];
+/*===========erwthsh===============================================================================================*/
+questions[10] = 'Με τι ισούται η ακτίνα του κύκλου του Mohr αν Α(σ<span>α</span>,0) και Β(σ<span>β</span>,0) (σ<span>α</span>>σ<span>β</span>) δύο αντιδιαμετρικά σημεία του;';
+choices[10] = ['((σ<span>α</span>+σ<span>β</span>)/2)^2+τ^2)^0.5', '((σ<span>α</span>-σ<span>β</span>)/2)^2+τ^2)', '(σ<span>α</span>+σ<span>β</span>)/2)^2+τ^2','(σ<span>α</span>-σ<span>β</span>)/2'];
+answers[10] = [3];
+/*===========erwthsh===============================================================================================*/
+questions[11] = 'Ποιές είναι οι συντεταγμένες του πόλου αν Α(σ<span>α</span>,τ) και Β(σ<span>β</span>,-τ) δύο αντιδιαμετρικά σημεία του κύκλου του Mohr;';
+choices[11] = ['Δεν γίνεται να γνωρίζουμε γιατί δεν γνωρίζουμε τον προσανατολισμό των επιφανειών στις οποίες ασκούνται τα Α και Β', '(σ<span>α</span>,τ)', '(σ<span>β</span>,τ)','(σ<span>α</span>+σ<span>β</span>,τ)'];
+answers[11] = [0];
+/*===========erwthsh===============================================================================================*/
+questions[12] = 'Ποιές είναι οι συντεταγμένες του πόλου αν Α(σ<span>v</span>,τ) και Β(σ<span>h</span>,-τ) δύο αντιδιαμετρικά σημεία του κύκλου του Mohr;(v:vertical , h:horizontal)';
+choices[12] = ['Δεν γίνεται να γνωρίζουμε γιατί δεν γνωρίζουμε τον προσανατολισμό των επιφανειών στις οποίες ασκούνται τα Α και Β', '(σ<span>h</span>,τ)', '(σ<span>v</span>,τ)','(σ<span>h</span>,-τ)'];
+answers[12] = [1]
+/*===========erwthsh===============================================================================================*/
+questions[13] = 'Ποιές είναι οι συντεταγμένες του πόλου αν Α(σ<span>v</span>,0) και Β(σ<span>h</span>,0) (σ<span>v</span>>σ<span>h</span>) δύο αντιδιαμετρικά σημεία του κύκλου του Mohr;(v:vertical , h:horizontal)';
+choices[13] = ['Δεν γίνεται να γνωρίζουμε γιατί δεν γνωρίζουμε τον προσανατολισμό των επιφανειών στις οποίες ασκούνται τα Α και Β', '(σ<span>h</span>=σ<span>3</span>,0)', '(σ<span>v</span>=σ<span>1</span>,0)','(σ<span>v</span>,-τ)'];
+answers[13] = [1]
+/*===========erwthsh===============================================================================================*/
+questions[14] = 'Με τι είναι ίσες οι κύριες τάσεις αν κέντρο Κ=(a,0) και ακτίνα R=r του κύκλου;';
+choices[14] = ['σ<span>1</span>=a+r και σ<span>3</span>=a-r', 'σ<span>1</span>=a+2r και σ<span>3</span>=a-2r', 'σ<span>1</span>=a και σ<span>3</span>=r','σ<span>1</span>=r και σ<span>3</span>=a'];
+answers[14] = [0]
+/*===========erwthsh===============================================================================================*/
+questions[15] = 'Ποιές είναι οι συντεταγμένες των σημείων με μέγιστη διατμητική τάση αν κέντρο Κ=(a,0) και ακτίνα R=r του κύκλου;';
+choices[15] = ['(a,r) και (a,-r)', '((a+r)/2,-r) και ((a-r)/2,-r)', '(a-r,r) και (a+r,-r)','(a,a-r) και (a,a+r)'];
+answers[15] = [0]
+/*===========erwthsh===============================================================================================*/
+questions[16] = 'Ποιά είναι η εξίσωση ευθείας που ξεκινάει απο το πόλο Π(σ<span>π</span>,τ<span>π</span>) και έχει διεύθυνση με τον οριζόντιο άξονα θ;';
+choices[16] = ['tanθ=(σ<span></span>+σ<span>π</span>)/(τ<span></span>+τ<span>π</span>)', 'tanθ=(τ<span></span>+τ<span>π</span>)/(σ<span></span>+σ<span>π</span>)', 'tanθ=(σ<span></span>-σ<span>π</span>)/(τ<span></span>-τ<span>π</span>)','tanθ=(τ<span></span>-τ<span>π</span>)/(σ<span></span>-σ<span>π</span>)'];
+answers[16] = [3]
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+/*===========erwthsh===============================================================================================*/
+
+/*========index initialization=========*/
+
+var lastIndex=questions.length-1;
+var numberOfQuestions=questions.length;
+var tuxaio=Math.floor((Math.random() * 100));
+var tuxaioSwsto=tuxaio%numberOfQuestions;
+console.log(tuxaioSwsto)
+var numberOfQuestions1;
+var tuxaioSwsto1;
+var realIndex;
+var score = 0;
+var i= 0;
+
+var listQuestion = function(){
+    if(i<questions.length){
+        var deikths=(tuxaioSwsto+i);
+            realIndex=deikths%(numberOfQuestions);
+        document.getElementById("counter").innerHTML="<a>"+(i+1)+"/"+numberOfQuestions+"</a>";
+        document.getElementById("myDiv1").innerHTML = '<p>'+questions[realIndex]+'</p>';
+        var lastIndex1=choices[realIndex].length-1;
+            numberOfQuestions1=choices[realIndex].length;
+        var tuxaio1=Math.floor((Math.random() * 100));
+            tuxaioSwsto1=tuxaio1%numberOfQuestions1;
+        var choicesOutput=[];//new Array()
+        for (var k=0; k<choices[realIndex].length; k++){
+            var deikths1=(tuxaioSwsto1+k);
+            var realIndex1=deikths1%(numberOfQuestions1);
+            choicesOutput.push(
+                '<p id="'+k+'" onClick="clickMyRadio('+k+')"><input type = "radio" name ='
+                +' "questionchoice">'+choices[realIndex][realIndex1]+'</p>');
+        }
+
+        document.getElementById("myDiv2").innerHTML =choicesOutput.join("");
+
+        document.getElementById("myDiv3").innerHTML = 
+            '<p><button onClick = "getRadioValue()">Καταχώρηση Απάντησης</button></p> <br>';
+    }
+};
+
+var getRadioValue = function(){
+    var elegxos=0;
+    var value = '';
+    var h;
+    for (var h = 0;  h < document.getElementsByName('questionchoice').length; h++){
+        if (document.getElementsByName('questionchoice')[h].checked==true){
+            value = h; 
+            elegxos=1;
+        }
+    }
+    //edw prepei na eksafaniseis kai to koumpi check gia na einai anagkasmenos o allos na paei sto epomeno
+    if (elegxos==0){
+
+    }else{
+        document.getElementById("myDiv3").innerHTML ="";
+        if (answers[realIndex]==(tuxaioSwsto1+value)%numberOfQuestions1){
+            score++; 
+            for (var k=0; k<choices[realIndex].length; k++){
+                 if (k==value){
+
+                }else{
+                      document.getElementById(k).innerHTML="...................."
+                }
+            }
+            document.getElementById(value).style.backgroundColor='green';
+            document.getElementById("myDiv3").innerHTML =
+            "<p><button input type = "
+            +"'submit' onClick = 'loadContent()'> Επόμενη Ερώτηση</button></p><br>";
+
+        }else {
+            for (var k=0; k<choices[realIndex].length; k++){
+                if (k==value){
+
+                }else{
+                      document.getElementById(k).innerHTML="...................."
+                }
+            }
+            document.getElementById(value).style.backgroundColor='red';
+           document.getElementById("myDiv3").innerHTML =
+           "<p><button input type = 'submit' onClick = 'loadContent()'> Επόμενη Ερώτηση"
+           +"</button></p><br>"; 
+        }
+        i++;
+    }
+    
+};
+var whatIsScore = function(){
+    return score; 
+};
+
+function loadContent(){
+    if (i==numberOfQuestions){
+        document.getElementById("myDiv1").innerHTML="<p><a onClick = 'loadContent1()'>"+score+"/"+numberOfQuestions+"</a></p>";
+        document.getElementById("myDiv1").id='lastMyDiv1';
+        document.getElementById("myDiv2").innerHTML="";
+        document.getElementById("myDiv2").id='lastMyDiv2';
+        document.getElementById("myDiv3").innerHTML="<p ><a>Για επανεκκίνηση κλικάρετε το αποτέλεσμα"
+           +"</a></p>";
+        document.getElementById("myDiv3").id='lastMyDiv3';
+        document.getElementById("myDiv4").innerHTML="";
+        document.getElementById("myDiv4").id='lastMyDiv4';
+        document.getElementById("counter").innerHTML="<p>Το σκορ σας είναι:</p>";
+        document.getElementById("counter").id='lastCounter';
+        
+    }else{
+        document.getElementById("myDiv3").innerHTML="";
+        listQuestion();
+    }
+    
+  
+}
+function loadContent1(){
+
+        document.getElementById("lastMyDiv1").innerHTML="";
+        document.getElementById("lastMyDiv1").id='myDiv1';
+        document.getElementById("lastMyDiv2").innerHTML="";
+        document.getElementById("lastMyDiv2").id='myDiv2';
+        document.getElementById("lastMyDiv3").innerHTML="";
+        document.getElementById("lastMyDiv3").id='myDiv3';
+        document.getElementById("lastMyDiv4").innerHTML="";
+        document.getElementById("lastMyDiv4").id='myDiv4';
+        document.getElementById("lastCounter").innerHTML="<p id="+"'index'></p>";
+        document.getElementById("lastCounter").id='counter';
+        /*========index initialization=========*/
+        tuxaio=Math.floor((Math.random() * 100));
+        tuxaioSwsto=tuxaio%lastIndex;
+        score = 0;
+        i= 0;
+        listQuestion();
+}
+function clickMyRadio(kapa){
+    document.getElementsByName('questionchoice')[kapa].checked=true
+}   
+
+window.onload = listQuestion;
+</script>
+</head>
+<body>
+<div id="header">
+    <div id="title">Κύκλος του Mohr</div>
+</div>
+<div id="counter">
+    <p id="index"></p>
+</div>
+<div id="myDiv1"></div> 
+<div id="myDiv2"></div>
+<div id="myDiv3"></div>
+<div id="myDiv4"></div>
+</body>
+</html>
